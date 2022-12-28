@@ -1,0 +1,23 @@
+{
+  "subject": "acct:shehroz@fosstodon.org",
+  "aliases": [
+    "https://fosstodon.org/@shehroz",
+    "https://fosstodon.org/users/shehroz"
+  ],
+  "links": [
+     {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://fosstodon.org/@shehroz"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://fosstodon.org/users/shehroz"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://fosstodon.org/authorize_interaction?uri={uri}"
+    }
+  ]
+}
