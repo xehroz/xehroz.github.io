@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^.well-known/host-meta(.*)$ https://fosstodon.org/.well-known/host-meta?resource=acct:shehroz@fosstodon.org [L,R=301]
+RewriteRule ^.well-known/webfinger(.*)$ https://fosstodon.org/.well-known/webfinger?resource=acct:shehroz@fosstodon.org [L,R=301]
+RewriteRule ^.well-known/nodeinfo(.*)$ https://fosstodon.org/.well-known/nodeinfo?resource=acct:shehroz@fosstodon.org [L,R=301]
