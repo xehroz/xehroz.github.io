@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shehroz Kaleem</title>
+    <style>
+        :root {
+            --bg-color: #0d0f12;
+            --surface-color: #161a22;
+            --border-color: #242b35;
+            --text-main: #e2e8f0;
+            --text-muted: #8a99ad;
+            --accent-color: #38bdf8;
+            --accent-hover: #7dd3fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Header / Identity section */
+        header {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-container {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .badge.charter {
+            background-color: #0369a1;
+            color: #fff;
+            border: 1px solid #0284c7;
+        }
+
+        /* Layout Grid Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background-color: var(--border-color);
+        }
+
+        p.summary {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Case Studies Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Simple scannable list */
+        .skills-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .skills-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .skill-item strong {
+            color: #fff;
+            display: block;
+            font-size: 1rem;
+        }
+
+        .skill-item span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Action/Contact Footer */
+        .cta-box {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-box p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #0f172a;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .links {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .links a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header Identity Block -->
+        <header>
+            <h1>Shehroz Kaleem</h1>
+            <div class="subtitle">Procurement Specialist</div>
+            <div class="badge-container">
+                <div class="badge">SAP Specialist</div>
+                <div class="badge">Sourcing</div>
+                <div class="badge">AI Model Conditioning</div>
+                <div class="badge">Procurement Systems Consultant</div>
+            </div>
+        </header>
+
+        <!-- Executive Focus -->
+        <section>
+            <h2>Executive Profile</h2>
+            <p class="summary">
+                A results-driven Procurement Specialist with over 9 years of multi-industry experience directing end-to-end sourcing, high-value contract legalities and ERP stabilization across mega-scale EPC, construction and infrastructure sectors. Proven track record of liquidating chronic backlogs, recovering leaked capital and scaling operational efficiency.
+            </p>
+            
+            <a href="shehroz-resume.pdf" class="btn">Résumé</a>
+            
+        </section>
+
+        <!-- Commercial Victories / Case Studies -->
+        <section>
+            <h2>Commercial Case Studies</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <h3>Infrastructure Execution</h3>
+                    <p>Managed project procurement pipeline for the Reko Diq Mining Company (Barrick) camp site in Chagai, Balochistan, enforcing rigid regulatory compliance under complex FIPP and Sales Tax framework.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Enterprise ERP Recovery</h3>
+                    <p>Led overhaul of company’s failing ERP architecture; eliminated a two-year SAP procurement backlog, restoring real-time KPI accuracy and transparent management reporting.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Capital Spend Optimization</h3>
+                    <p>Secured millions in verified cost savings on township developments through strategic vendor rationalisation, bulk purchase pricing locks and aggressive negotiation loops.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Next-Gen Sourcing Systems</h3>
+                    <p>Translating real-world supply chain and contract negotiation expertise into machine intelligence frameworks, training next-generation AI models for Silicon Valley tech-giants.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technical Domain Frameworks -->
+        <section>
+            <h2>Core Competencies</h2>
+            <div class="skills-list">
+                
+                <div class="skill-item">
+                    <strong>Sourcing &amp; Commercial Execution</strong>
+                    <span>Heavy construction logistics, bulk construction materials, vendor audits and capital assets.</span>
+                </div>
+
+                <div class="skill-item">
+                    <strong>Contracts, Risk &amp; Compliance</strong>
+                    <span>EPC contract administration, SLA drafting, Incoterms and tax regime alignment.</span>
+                </div>
+
+                <div class="skill-item">
+                    <strong>Enterprise Software &amp; Data</strong>
+                    <span>SAP Business One, SAP Ariba, ERP re-engineering and Chart of Accounts localisation.</span>
+                </div>
+
+                <div class="skill-item">
+                    <strong>AI Architecture &amp; Alignment</strong>
+                    <span>Domain subject matter expert for LLM training, adversarial negotiation training and procurement automation auditing.</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sterile Corporate CTA Box -->
+        <footer class="cta-box">
+            <h3>Engage Competence</h3>
+            <p>Available for corporate consulting assignments, high-cap supply chain turnarounds and executive positions.</p>
+            <a href="mailto:me@shehroz.pk" class="btn">Initiate Briefing</a>
+            
+            <div class="links">
+                <a href="https://wa.me/923335371083?text=Hello%20%E2%80%94%20I%E2%80%99m%20seeking%20professional%20assistance%20to%20begin%20a%20procurement%20transformation.%20Could%20you%20please%20provide%20details%20on%20your%20services%20and%20pricing%3F">+92 333 537 1083</a>
+                <span>&bull;</span>
+                <a href="https://www.shehroz.pk">www.shehroz.pk</a>
+            </div>
+        </footer>
+
+    </div>
+<a href="https://github.com/xehroz">.</a>
+</body>
+</html>
