@@ -1,0 +1,8 @@
+/* Bootstrap 5 adjustments
+   Bootstrap 5 turns .progress into a flex container and .progress-bar into a
+   flex item, which collapses the absolutely-positioned skill percentage badge
+   to the left (over the title). Re-anchor each badge to the right end of its
+   filled bar and stop the 4px track from clipping the badge floating above it. */
+.progress-item .progress { overflow: visible; }
+.progress-item .progress-bar { position: relative; overflow: visible; }
+.progress-item .progress-percent { top: -20px; right: 0; left: auto; }

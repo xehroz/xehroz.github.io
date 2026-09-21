@@ -1,319 +1,500 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Shehroz Kaleem</title>
-    <style>
-        :root {
-            --bg-color: #0d0f12;
-            --surface-color: #161a22;
-            --border-color: #242b35;
-            --text-main: #e2e8f0;
-            --text-muted: #8a99ad;
-            --accent-color: #38bdf8;
-            --accent-hover: #7dd3fc;
-        }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    <!-- favicon -->
+    <link href="favicon.png" rel=icon>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            padding: 2rem 1rem;
-        }
+    <!-- web-fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    <!-- font-awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 
-        /* Header / Identity section */
-        header {
-            margin-bottom: 3rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 2rem;
-        }
+    <!-- Bootstrap 5 -->
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
 
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            color: #fff;
-            margin-bottom: 0.5rem;
-        }
+    <!-- Style CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/onlinecv-bs5.css" rel="stylesheet">
+    <link href="css/onlinecv-modern.css" rel="stylesheet">
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+<meta name="robots" content="noindex, nofollow">
+  </head>
+<body id="page-top">
+<div id="main-wrapper">
+<!-- Page Preloader -->
+<div id="preloader">
+    <div id="status">
+        <div class="status-mes"></div>
+    </div>
+</div>
 
-        .badge-container {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
+<div class="columns-block">
+<div class="left-col-block blocks">
+    <header class="header">
+        <div class="content text-center">
+            <h1>Hi, I'm Shehroz Kaleem!</h1>
 
-        .badge {
-            background-color: rgba(56, 189, 248, 0.1);
-            color: var(--accent-color);
-            padding: 0.35rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
+            <p class="lead">Senior Procurement Executive</p>
+            <ul class="social-icon">
+                <li><a href="https://scratchpad.shehroz.pk/"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/shehrozkaleem"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="Résumé.pdf"><i class="fa fa-file-text" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="profile-img"></div>
+    </header>
+    <!-- .header-->
+</div>
 
-        .badge.charter {
-            background-color: #0369a1;
-            color: #fff;
-            border: 1px solid #0284c7;
-        }
 
-        /* Layout Grid Sections */
-        section {
-            margin-bottom: 3rem;
-        }
-
-        h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.01em;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        h2::after {
-            content: '';
-            flex-grow: 1;
-            height: 1px;
-            background-color: var(--border-color);
-        }
-
-        p.summary {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Case Studies Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        @media (min-width: 640px) {
-            .grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .card {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 1.5rem;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .card:hover {
-            border-color: rgba(56, 189, 248, 0.4);
-        }
-
-        .card h3 {
-            font-size: 1.1rem;
-            color: #fff;
-            margin-bottom: 0.5rem;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Simple scannable list */
-        .skills-list {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-
-        @media (min-width: 640px) {
-            .skills-list {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .skill-item strong {
-            color: #fff;
-            display: block;
-            font-size: 1rem;
-        }
-
-        .skill-item span {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        /* Action/Contact Footer */
-        .cta-box {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 2rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        .cta-box p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: #0f172a;
-            font-weight: 600;
-            text-decoration: none;
-            padding: 0.75rem 2rem;
-            border-radius: 4px;
-            transition: background-color 0.2s ease;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-hover);
-        }
-
-        .links {
-            margin-top: 1.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        .links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s ease;
-        }
-
-        .links a:hover {
-            color: var(--accent-color);
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        
-        <!-- Header Identity Block -->
-        <header>
-            <h1>Shehroz Kaleem</h1>
-            <div class="subtitle">Procurement Specialist</div>
-            <div class="badge-container">
-                <div class="badge">SAP Specialist</div>
-                <div class="badge">Sourcing</div>
-                <div class="badge">AI Model Conditioning</div>
-                <div class="badge">Procurement Ontologist</div>
+<div class="right-col-block blocks">
+<section class="intro section-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>What I am all about.</h2>
+                </div>
             </div>
-        </header>
+            <div class="col-md-12">
+                <p>
+                    A seasoned procurement professional with 10+ years of experience in EPC, Real estate development and construction industry, managing direct and indirect spend, having track record of rejuvenating supply chain function, clearing SAP backlogs, saving millions through cost avoidance and supplier consolidation.
+                </p>
 
-        <!-- Executive Focus -->
-        <section>
-            <h2>Executive Profile</h2>
-            <p class="summary">
-                A results-driven Procurement Specialist with over 9 years of multi-industry experience directing end-to-end sourcing, high-value contract legalities and ERP stabilization across mega-scale EPC, construction and infrastructure sectors. Proven track record of liquidating chronic backlogs, recovering leaked capital and scaling operational efficiency.
-            </p>
-            
-            <a href="shehroz-resume.pdf" class="btn">Résumé</a>
-            
-        </section>
+                <p>
+                    Currently leveraging my expertise to train & audit next-generation Artificial Intelligence systems in contract administration, supplier relationship management, execute S2P process autonomously and to achieve lowest total cost of ownership (TCO).
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <!-- Commercial Victories / Case Studies -->
-        <section>
-            <h2>Commercial Case Studies</h2>
-            <div class="grid">
-                
-                <div class="card">
-                    <h3>Infrastructure Execution</h3>
-                    <p>Managed project procurement pipeline for the Reko Diq Mining Company (Barrick) camp site in Chagai, Balochistan, enforcing rigid regulatory compliance under complex FIPP and Sales Tax framework.</p>
+
+<section class="expertise-wrapper section-wrapper gray-bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>Expertise</h2>
                 </div>
+            </div>
+        </div>
+        <!-- .row -->
 
-                <div class="card">
-                    <h3>Enterprise ERP Recovery</h3>
-                    <p>Led overhaul of company’s failing ERP architecture; eliminated a two-year SAP procurement backlog, restoring real-time KPI accuracy and transparent management reporting.</p>
-                </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="expertise-item">
+                    <h3>Sourcing & Commercial Execution</h3>
 
-                <div class="card">
-                    <h3>Capital Spend Optimization</h3>
-                    <p>Secured millions in verified cost savings on township developments through strategic vendor rationalisation, bulk purchase pricing locks and aggressive negotiation loops.</p>
+                    <p>
+                        Product sourcing, bulk buying of construction materials, vendor audits and CAPEX.
+                    </p>
                 </div>
+            </div>
+            <div class="col-md-6">
+                <div class="expertise-item">
+                    <h3>Contracts, Risk & Compliance</h3>
 
-                <div class="card">
-                    <h3>Next-Gen Sourcing Systems</h3>
-                    <p>Translating real-world supply chain and contract negotiation expertise into machine intelligence frameworks, training next-generation AI models for Silicon Valley tech-giants.</p>
+                    <p>
+                        EPC contract administration, SLA drafting, procurement audit, Incoterms and tax regime alignment.
+                    </p>
                 </div>
+            </div>
+        </div>
+        <!-- .row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="expertise-item">
+                    <h3>Enterprise Software & Data</h3>
+
+                    <p>
+                        SAP Ariba, SAP Business One, ERP Backlog cleanup, change management, process improvement.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="expertise-item">
+                    <h3>AI Training, LLM & RLHF</h3>
+
+                    <p>
+                        Domain subject matter expert for LLM training and procurement automation audits. </p>
+                </div>
+            </div>
+        </div>
+        <!-- .row -->
+    </div>
+    <!--.container-fluid-->
+</section>
+<!-- .expertise-wrapper -->
+
+<section class="section-wrapper skills-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>Skills</h2>
+                </div>
+            </div>
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="progress-wrapper">
+
+                    <div class="progress-item">
+                        <span class="progress-title">Strategic Sourcing</span>
+
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0"
+                                 aria-valuemax="100" style="width: 92%"><span class="progress-percent"> 92%</span>
+                            </div>
+                        </div>
+                        <!-- .progress -->
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                     <div class="progress-item">
+                        <span class="progress-title">Contract Administration</span>
+
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="86" aria-valuemin="0"
+                                 aria-valuemax="100" style="width: 86%"><span class="progress-percent"> 86%</span>
+                            </div>
+                        </div>
+                        <!-- .progress -->
+                    </div>
+                    
+                    
+                    
+                    
+                         
+                    
+                     <div class="progress-item">
+                        <span class="progress-title">S2P cycle management</span>
+
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0"
+                                 aria-valuemax="100" style="width: 94%"><span class="progress-percent"> 94%</span>
+                            </div>
+                        </div>
+                        <!-- .progress -->
+                    </div>
+                    
+                    
+               
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!-- .skill-progress -->
+
+
+                    <div class="progress-item">
+                        <span class="progress-title">Market Research</span>
+
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                 aria-valuemax="100" style="width: 90%"><span class="progress-percent"> 90%</span>
+                            </div>
+                        </div>
+                        <!-- /.progress -->
+                    </div>
+                    <!-- /.skill-progress -->
+
+
+                    <div class="progress-item">
+                        <span class="progress-title">Organisational Skills</span>
+
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="79" aria-valuemin="0"
+                                 aria-valuemax="100" style="width: 79%;"><span class="progress-percent"> 79%</span>
+                            </div>
+                        </div>
+                        <!-- /.progress -->
+                    </div>
+                    <!-- /.skill-progress -->
+
+                    <div class="progress-item">
+                        <span class="progress-title">Communtcation Skills</span>
+
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0"
+                                 aria-valuemax="100" style="width: 87%;"><span class="progress-percent"> 87%</span>
+                            </div>
+                        </div>
+                        <!-- /.progress -->
+                    </div>
+                    <!-- /.skill-progress -->
+                    <div class="progress-item">
+                        <span class="progress-title">Project Management</span>
+
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0"
+                                 aria-valuemax="100" style="width: 76%;"><span class="progress-percent"> 76%</span>
+                            </div>
+                        </div>
+                        <!-- .progress -->
+                    </div>
+                    <!-- .skill-progress -->
+
+                </div>
+                <!-- /.progress-wrapper -->
+            </div>
+        </div>
+        <!--.row -->
+    </div>
+    <!-- .container-fluid -->
+</section>
+<!-- .skills-wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section-wrapper section-experience gray-bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title"><h2>Work Experience</h2></div>
+            </div>
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content-item">
+                    <small>May, 2025 - Present</small>
+                    <h3>Senior Procurement Executive</h3>
+                    <h4>Micro1 Inc.</h4>
+
+                    <p>Palo Alto, CA, USA (Remote)</p>
+                </div>
+                <!-- .experience-item -->
+                <div class="content-item">
+                    <small>Aug, 2024 - May, 2025</small>
+                    <h3>Senior Procurement Executive</h3>
+                    <h4>Chinoy Engineering & Construction (Pvt.) Ltd.</h4>
+
+                    <p>Lahore, Pakistan</p>
+                </div>
+                <!-- .experience-item -->
+                <div class="content-item">
+                    <small>Nov, 2023 - Jun, 2024</small>
+                    <h3>Assistant Manager Purchase</h3>
+                    <h4>Shahid Builders (Pvt.) Ltd.</h4>
+
+                    <p>Lahore, Pakistan</p>
+                </div>
+                <!-- .experience-item -->
+                <div class="content-item">
+                    <small>Jun, 2021 - Nov, 2023</small>
+                    <h3>Senior Procurement Executive</h3>
+                    <h4>Al-Jalil Developers</h4>
+
+                    <p>Lahore, Pakistan</p>
+                </div>
+                <!-- .experience-item -->
+                <div class="content-item">
+                    <small>Oct, 2020 - Dec, 2020</small>
+                    <h3>Technical Purchaser</h3>
+                    <h4>The Knights (Pvt.) Ltd.</h4>
+
+                    <p>Islamabad, Pakistan</p>
+                </div>
+                <!-- .experience-item -->
+                <div class="content-item">
+                    <small>Oct, 2015 - Aug, 2020</small>
+                    <h3>Procurement Officer</h3>
+                    <h4>Haq’s International</h4>
+
+                    <p>Chakwal, Pakistan</p>
+                </div>
+                <!-- .experience-item -->
 
             </div>
-        </section>
+        </div>
+        <!--.row-->
+    </div>
+    <!-- .container-fluid -->
 
-        <!-- Technical Domain Frameworks -->
-        <section>
-            <h2>Core Competencies</h2>
-            <div class="skills-list">
-                
-                <div class="skill-item">
-                    <strong>Sourcing &amp; Commercial Execution</strong>
-                    <span>Heavy construction logistics, bulk construction materials, vendor audits and capital assets.</span>
-                </div>
+</section>
+<!-- .section-experience -->
 
-                <div class="skill-item">
-                    <strong>Contracts, Risk &amp; Compliance</strong>
-                    <span>EPC contract administration, SLA drafting, Incoterms and tax regime alignment.</span>
-                </div>
-
-                <div class="skill-item">
-                    <strong>Enterprise Software &amp; Data</strong>
-                    <span>SAP Business One, SAP Ariba, ERP re-engineering and Chart of Accounts localisation.</span>
-                </div>
-
-                <div class="skill-item">
-                    <strong>AI Architecture &amp; Alignment</strong>
-                    <span>Domain subject matter expert for LLM training, adversarial negotiation training and procurement automation auditing.</span>
-                </div>
-
+<section class="section-wrapper section-education">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title"><h2>Education</h2></div>
             </div>
-        </section>
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content-item">
+                    <small>2009 - 2011</small>
+                    <h3>Bachelor of Business Administration</h3>
+                    <h4>Virtual University of Pakistan</h4>
 
-        <!-- Sterile Corporate CTA Box -->
-        <footer class="cta-box">
-            <h3>Engage Competence</h3>
-            <p>Available for corporate consulting assignments, high-cap supply chain turnarounds and executive positions.</p>
-            <a href="mailto:me@shehroz.pk" class="btn">Initiate Briefing</a>
-            
-            <div class="links">
-                <a href="https://wa.me/923335371083?text=Hello%20%E2%80%94%20I%E2%80%99m%20seeking%20professional%20assistance%20to%20begin%20a%20procurement%20transformation.%20Could%20you%20please%20provide%20details%20on%20your%20services%20and%20pricing%3F">+92 333 537 1083</a>
-                <span>&bull;</span>
-                <a href="https://www.shehroz.pk">www.shehroz.pk</a>
+                    <p>Lahore, Pakistan</p>
+                </div>
+                <!-- .experience-item -->
             </div>
-        </footer>
+        </div>
+        <!--.row-->
+    </div>
+    <!-- .container-fluid -->
+
+</section>
+<!-- .section-education -->
+
+<section class="section-wrapper section-interest gray-bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>Interest</h2>
+                </div>
+            </div>
+        </div>
+        <!-- .row -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content-item">
+                    <h3>Process Improvement</h3>
+
+                    <p></p>
+                </div>
+                <div class="content-item">
+                    <h3>Procurement Ontology</h3>
+
+                    <p></p>
+
+                </div>
+                <div class="content-item">
+                    <h3>Technical Documentation</h3>
+
+                    <p></p>
+                </div>
+                <div class="content-item">
+                    <h3>Project Management</h3>
+
+                    <p></p>
+                </div>
+                <div class="content-item">
+                    <h3>Domain specific Large Language Models</h3>
+
+                    <p></p>
+
+                </div>
+                <div class="content-item">
+                    <h3>Blogging</h3>
+
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <!-- .row -->
 
     </div>
-<a href="https://github.com/xehroz">.</a>
+</section>
+<!-- .section-publications -->
+
+
+
+<section class="section-contact section-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                </div>
+            </div>
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="col-md-12">
+                <address>
+                    <strong>Address</strong><br>
+                    Defence Road<br>
+                    Lahore, Pakistan
+                </address>
+                <address>
+                    <strong>Mobile Number</strong><br>
+                    +92 333 537 1083
+                </address>
+                <address>
+                    <strong>Email</strong><br>
+                    <a href="mailto:me@shehroz.pk">me@shehroz.pk</a>
+                </address>
+            </div>
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="col-md-12">
+                
+
+            </div>
+        </div>
+    </div>
+    <!--.container-fluid-->
+</section>
+<!--.section-contact-->
+
+<footer class="footer">
+    <div class="copyright-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copytext">&copy; Shehroz Kaleem. This site is open source. Fork this on <a
+                            href="https://github.com/xehroz/xehroz.github.io/fork">GitHub</a></div>
+                </div>
+            </div>
+            <!--.row-->
+        </div>
+        <!-- .container-fluid -->
+    </div>
+    <!-- .copyright-section -->
+</footer>
+<!-- .footer -->
+</div>
+<!-- .right-col-block -->
+</div>
+<!-- .columns-block -->
+</div>
+<!-- #main-wrapper -->
+
+<!-- Bootstrap 5 bundle (Popper included) -->
+<script src="js/vendor/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
